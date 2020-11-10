@@ -1,29 +1,12 @@
 #include <stdio.h>
 #include "arvore.h"
 
+// Gera as constantes true e false
 #define true 1
 #define false 0
 
 void iniciarArvore(Arvore **tree) { // Inicializa a arvore com valor "vazio"
     *tree = NULL;
-}
-
-int printarMenu() {
-    int valor;
-
-    printf(
-        "\n============== Menu =================\n"
-        "1) Digitar as entradas\n"
-        "2) Ler do arquivo\n"
-        "3) Encerrar\n"
-        "\n"
-        "Digite a opcao desejada: "
-        );
-  
-    scanf("%d", &valor); 
-
-    return valor;
-
 }
 
 void inserirNo(Arvore **tree, int valor) {}
