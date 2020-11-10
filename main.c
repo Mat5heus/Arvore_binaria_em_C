@@ -15,8 +15,8 @@
 
 int main() {
 
-    Arvore *tree; 
-    int resp;
+    Arvore *tree, *aux;
+    int resp, valor;
 
     iniciarArvore(&tree); // Gera um nó vazio
 
@@ -38,6 +38,7 @@ int main() {
         switch (resp) { 
         case 1:
             printf("\nLiberando entrada de dados...\n"); // Se usuario escolheu digitar os dados
+            lerDoUsuario(tree);
             break;
         case 2:
             printf("\nAbrindo arquivo...\n"); // Se usuario escolheu ler do arquivo
@@ -55,7 +56,7 @@ int main() {
 
     do { // Exibe o menu até que o usuario o encerre
 
-        printf( // Printa o menu
+        printf( // Printa o segundo menu
         "\n============== Sub-Menu =================\n"
         "1) Buscar um valor\n"
         "2) Mostrar no raiz\n"
@@ -78,12 +79,17 @@ int main() {
         scanf("%d", &resp); 
 
         // Usa a resposta do usuario para iniciar uma acao
-        switch (resp) { 
+        switch (resp) {
         case 1:
-            printf("\nLiberando entrada de dados...\n"); // Se usuario escolheu digitar os dados
+            printf("\nDigite um valor para busca: "); // Se usuario escolheu digitar os dados
+            scanf("%d", &valor);
             break;
         case 2:
-            printf("\nAbrindo arquivo...\n"); // Se usuario escolheu ler do arquivo
+            printf("\nNo raiz: %d", tree->dado); // Se usuario escolheu ver a raiz
+            break;
+        case 12:
+            printf("\nEm ordem: ");
+            emOrdem(tree);
             break;
         case 13:
             printf("\nEncerrando...\n"); // Se usuario escolheu encerrar
