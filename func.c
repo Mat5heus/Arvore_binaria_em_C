@@ -51,19 +51,6 @@ void inserirNo(Arvore **tree, int valor) {
 
 void lerArquivo(Arvore **tree) {}
 
-void lerDoUsuario(Arvore *tree) {
-    int resp = NULL;
-
-    printf(
-        "\nDigite -1 para finalizar a leitura...\n"
-        "\nDigite o(s) valor(es) que deseja adicionar: "
-    );
-    do {
-        inserirNo(&tree, resp);
-        scanf("%d", &resp);
-    } while(resp != -1);
-}
-
 int estaVazia(Arvore *tree) {
     if(tree == NULL)
         return true;
