@@ -1,83 +1,96 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "arvore.h"
 
+// Gera as constantes true e false
 #define true 1
 #define false 0
 
+void mensagens(int cod, int valor) {
+    printf("\nERRO %d: ", cod);
+    switch (cod) {
+    case 1:
+        printf("O valor %d ja foi adicionado\n", valor);
+        break;
+    default:
+        printf("Mensagem nao encontrada!");
+        break;
+    }
+}
 
-void iniciarArvore(Arvore **tree) {
-
+void iniciarArvore(Arvore **tree) { // Inicializa a arvore com valor "vazio"
     *tree = NULL;
 }
 
-void adicionarNo(Arvore **tree) {
-    
+//Não esta preenchendo a arvore corretamente
+void inserirNo(Arvore **tree, int valor) {
+    Arvore *aux = *tree;
+
+    if(valor == NULL) return;
+
+    if(estaVazia(*tree)) {
+        Arvore *novo;
+
+        novo = (Arvore*) malloc(sizeof(Arvore));
+        
+        novo->pai = NULL;
+        novo->dir = NULL;
+        novo->esq = NULL;
+        novo->dado = valor;
+
+        *tree = novo;
+    } else {
+        if(aux->dado == valor)
+            mensagens(1, valor);
+        else if(aux->dado > valor)
+            inserirNo(&aux->esq, valor);
+        else
+            inserirNo(&aux->dir, valor);
+    }
 }
 
-void lerArquivo() {
+void lerArquivo(Arvore **tree) {}
 
+int estaVazia(Arvore *tree) {
+    if(tree == NULL)
+        return true;
+    else
+        return false;
 }
 
-void lerDoUsuario() {
+Arvore* buscar(Arvore *tree,int valor) {}
 
+int printarNoRaiz(Arvore *tree) {
+    Arvore *aux = tree;
+    return aux->dado;
 }
 
-int estaVazia() {
+void printarNosFolha(Arvore *tree) {}
 
-    return false;
-}
+void printarNosRamo(Arvore *tree) {}
 
-Arvore* buscar() {
+int alturaDaArvore(Arvore *tree) {}
 
-}
+int profundidadeDaArvore(Arvore *tree) {}
 
-void printarNoRaiz() {
+int grauDoNo(Arvore *tree) {}
 
-}
+int alturaDoNo(Arvore *tree) {}
 
-void printarNosFolha() {
+int profundidoDoNo(Arvore *tree) {}
 
-}
+void printarDescendentes(Arvore *tree) {}
 
-void printarNosRamo() {
+void printarAncestrais(Arvore *tree) {}
 
-}
+void preOrdem(Arvore *tree) {} //Gui
 
-void alturaDaArvore() {
+void posOrdem(Arvore *tree) {} //Gui
 
-}
-
-void profundidadeDaArvore() {
-
-}
-
-void grauDoNo() {
-
-}
-
-void alturaDoNo() {
-
-}
-
-void profundidoDoNo() {
-
-}
-
-void printarDescendentes() {
-
-}
-
-void printarAncestrais() {
-
-}
-
-void preOrdem() { // Gui 
-
-}
-
-void posOrdem() { // Gui 
-
-}
-
-void emOrdem() { // Gui
-
-}
+void emOrdem(Arvore *tree) {
+    if (!estaVazia(tree)) {
+        emOrdem(tree->esq);
+        printf("%d ", tree->dado);
+        emOrdem(tree->dir);
+    }
+} 
