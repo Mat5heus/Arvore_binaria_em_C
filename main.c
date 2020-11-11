@@ -37,8 +37,16 @@ int main() {
         // Usa a resposta do usuario para iniciar uma acao
         switch (resp) { 
         case 1:
+            valor = NULL;
             printf("\nLiberando entrada de dados...\n"); // Se usuario escolheu digitar os dados
-            lerDoUsuario(tree);
+            printf(
+                "\nDigite -1 para finalizar a leitura...\n"
+                "Digite o(s) valor(es) que deseja adicionar: "
+            );
+            do {
+                inserirNo(&tree, valor);
+                scanf("%d", &valor);
+            } while(valor != -1);
             break;
         case 2:
             printf("\nAbrindo arquivo...\n"); // Se usuario escolheu ler do arquivo
