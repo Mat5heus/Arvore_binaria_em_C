@@ -98,11 +98,12 @@ int main() {
             printf("\nNo raiz: %d", tree->dado); // Se usuario escolheu ver a raiz
             break;
         case 3:
-            printf("\nNo(s) folha: "); // Por favor, comentar funcao
+            printf("\nNo(s) folha: "); // Exibe somente os nos folha
             printarNosFolha(tree);
             break;
         case 4:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("\nNo(s) ramo: "); // Exibe somente os nos ramo
+            printarNosRamo(tree, tree->dado); // Raiz deve ser passada
             break;
         case 5:
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
