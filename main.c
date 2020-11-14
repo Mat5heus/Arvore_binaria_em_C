@@ -103,7 +103,7 @@ int main() {
             break;
         case 4:
             printf("\nNo(s) ramo: "); // Exibe somente os nos ramo
-            printarNosRamo(tree, tree->dado); // Raiz deve ser passada
+            printarNosRamo(tree); // Raiz deve ser passada
             break;
         case 5:
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
