@@ -41,14 +41,24 @@ void inserirNo(Arvore **tree, int valor) {
         novo->dado = valor;
 
         *tree = novo;
-    } else {
+    } else { 
         if(aux->dado == valor)
             mensagens(1, valor);
         else if(aux->dado > valor)
             inserirNo(&aux->esq, valor);
         else
-            inserirNo(&aux->dir, valor);
+            inserirNo(&aux->dir,valor);
     }
+
+     if(aux != NULL) {
+        if (aux->esq != NULL)
+            if(aux->esq->pai == NULL)
+                aux->esq->pai = aux;
+        if (aux->dir != NULL)
+            if(aux->dir->pai == NULL)
+                aux->dir->pai = aux;
+    }
+      
 }
 
 void lerArquivo(Arvore **tree) {}
@@ -82,12 +92,13 @@ void printarNosFolha(Arvore *tree) {
     } 
 }
 
-void printarNosRamo(Arvore *tree, int valor) {
+void printarNosRamo(Arvore *tree) {
     if (!estaVazia(tree)) {
-        if (!ehNoFolha(tree) && tree->dado != valor) // Printa tudo que nao for no folha ou raiz
+        // Printa tudo que nao for no folha ou raiz
+        if (!ehNoFolha(tree) && tree->pai != NULL)
             printf("%d ", tree->dado);
-        printarNosRamo(tree->esq, valor);
-        printarNosRamo(tree->dir, valor);
+        printarNosRamo(tree->esq);
+        printarNosRamo(tree->dir);
     } 
 }
 
