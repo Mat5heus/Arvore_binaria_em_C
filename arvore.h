@@ -13,7 +13,7 @@ void iniciarArvore(Arvore **);
 void inserirNo(Arvore **, int);
 void lerArquivo(Arvore **);
 void printarNosFolha(Arvore *);
-void printarNosRamo(Arvore *, int);
+void printarNosRamo(Arvore *);
 int alturaDaArvore(Arvore *);
 int profundidadeDaArvore(Arvore *);
 int grauDoNo(Arvore *);
