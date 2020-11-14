@@ -12,9 +12,8 @@ typedef struct _arvore {
 void iniciarArvore(Arvore **);
 void inserirNo(Arvore **, int);
 void lerArquivo(Arvore **);
-int printarNoRaiz(Arvore *);
 void printarNosFolha(Arvore *);
-void printarNosRamo(Arvore *);
+void printarNosRamo(Arvore *, int);
 int alturaDaArvore(Arvore *);
 int profundidadeDaArvore(Arvore *);
 int grauDoNo(Arvore *);
