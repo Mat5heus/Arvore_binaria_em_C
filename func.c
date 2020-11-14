@@ -7,15 +7,17 @@
 #define false 0
 
 void mensagens(int cod, int valor) {
-    printf("\nERRO %d: ", cod);
+    printf("\nAVISO #%d: ", cod);
     switch (cod) {
     case 1:
-        printf("O valor %d ja foi adicionado\n", valor);
+        printf("O valor %d ja foi adicionado!", valor);
         break;
     default:
         printf("Mensagem nao encontrada!");
         break;
     }
+
+    printf("\n");
 }
 
 void iniciarArvore(Arvore **tree) { // Inicializa a arvore com valor "vazio"
