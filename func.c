@@ -53,6 +53,7 @@ void inserirNo(Arvore **tree, int valor) {
 
 void lerArquivo(Arvore **tree) {}
 
+//verifica se o no esta vazio
 int estaVazia(Arvore *tree) {
     if(tree == NULL)
         return true;
@@ -60,6 +61,7 @@ int estaVazia(Arvore *tree) {
         return false;
 }
 
+// Verifica se o no tem filhos
 int ehNoFolha(Arvore *tree) {
     if(tree->dir == NULL && tree->esq == NULL)
         return true;
@@ -67,24 +69,27 @@ int ehNoFolha(Arvore *tree) {
         return false;
 }
 
+// Busca um no na arvore e o retorna
 Arvore* buscar(Arvore *tree,int valor) {}
 
-int printarNoRaiz(Arvore *tree) {
-    Arvore *aux = tree;
-    return aux->dado;
-}
-
+// Printa somente os nos folha
 void printarNosFolha(Arvore *tree) {
-
     if (!estaVazia(tree)) {
-        printarNosFolha(tree->esq);
-        if (ehNoFolha(tree))
+        if (ehNoFolha(tree)) // Printa so o que for folha
             printf("%d ", tree->dado);
+        printarNosFolha(tree->esq);
         printarNosFolha(tree->dir);
     } 
 }
 
-void printarNosRamo(Arvore *tree) {}
+void printarNosRamo(Arvore *tree, int valor) {
+    if (!estaVazia(tree)) {
+        if (!ehNoFolha(tree) && tree->dado != valor) // Printa tudo que nao for no folha ou raiz
+            printf("%d ", tree->dado);
+        printarNosRamo(tree->esq, valor);
+        printarNosRamo(tree->dir, valor);
+    } 
+}
 
 int alturaDaArvore(Arvore *tree) {}
 
