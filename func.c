@@ -60,6 +60,13 @@ int estaVazia(Arvore *tree) {
         return false;
 }
 
+int ehNoFolha(Arvore *tree) {
+    if(tree->dir == NULL && tree->esq == NULL)
+        return true;
+    else
+        return false;
+}
+
 Arvore* buscar(Arvore *tree,int valor) {}
 
 int printarNoRaiz(Arvore *tree) {
@@ -67,7 +74,15 @@ int printarNoRaiz(Arvore *tree) {
     return aux->dado;
 }
 
-void printarNosFolha(Arvore *tree) {}
+void printarNosFolha(Arvore *tree) {
+
+    if (!estaVazia(tree)) {
+        printarNosFolha(tree->esq);
+        if (ehNoFolha(tree))
+            printf("%d ", tree->dado);
+        printarNosFolha(tree->dir);
+    } 
+}
 
 void printarNosRamo(Arvore *tree) {}
 
