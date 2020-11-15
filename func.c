@@ -80,7 +80,18 @@ int ehNoFolha(Arvore *tree) {
 }
 
 // Busca um no na arvore e o retorna
-Arvore* buscar(Arvore *tree,int valor) {}
+Arvore* buscar(Arvore *tree,int valor) {
+    
+    while(tree != NULL) {
+        if (tree->dado == valor)
+            return tree;
+        else if (tree->dado > valor)
+            tree = tree->esq;
+        else
+            tree = tree->dir;
+    }
+    return tree;
+}
 
 // Printa somente os nos folha
 void printarNosFolha(Arvore *tree) {
