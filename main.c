@@ -16,7 +16,7 @@
 int main() {
 
     Arvore *tree, *aux;
-    int resp, valor;
+    int resp, valor, ctd;
 
     iniciarArvore(&tree); // Gera um nó vazio
 
@@ -93,8 +93,8 @@ int main() {
         case 1:
             printf("\nDigite um valor para busca: "); // Se usuario escolheu digitar os dados
             scanf("%d", &valor);
-            if ((aux = buscar(tree, valor)) != NULL)
-                printf("O valor %d foi encontrado!", aux->dado);
+            if ((aux = buscar(tree, valor, &ctd)) != NULL)
+                printf("O valor %d foi encontrado com %d pulos!", aux->dado, ctd);
             else
                 printf("O valor %d nao foi localizado!", valor);
             break;
@@ -124,14 +124,16 @@ int main() {
         case 9:
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
             break;
-        case 10:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+       case 10:
+        	printf("\nPre-ordem: "); // Poe os dados ordem de processamento
+            preOrdem(tree);
             break;
         case 11:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+        	printf("\nPos-ordem: "); // Poe os dados em ordem decresente
+            posOrdem(tree);
             break;
         case 12:
-            printf("\nEm ordem: "); // Pega os dados da arvore em ordem crescente
+            printf("\nEm ordem: "); // Pega os dados em ordem crescente
             emOrdem(tree);
             break;
         case 13:
