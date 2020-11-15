@@ -69,7 +69,15 @@ void printarNosFolha(Arvore *tree) {}
 
 void printarNosRamo(Arvore *tree) {}
 
-int alturaDaArvore(Arvore *tree) {}
+int alturaDaArvore(Arvore *tree) {} // Leo
+    if (r == NULL) 
+      return -1; // altura da árvore vazia
+   else {
+      int ae = altura (r->esq);
+      int ad = altura (r->dir);
+      if (ae < ad) return ad + 1;
+      else return ae + 1;
+   }
 
 int profundidadeDaArvore(Arvore *tree) {}
 
