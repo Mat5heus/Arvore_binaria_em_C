@@ -93,6 +93,10 @@ int main() {
         case 1:
             printf("\nDigite um valor para busca: "); // Se usuario escolheu digitar os dados
             scanf("%d", &valor);
+            if ((aux = buscar(tree, valor)) != NULL)
+                printf("O valor %d foi encontrado!", aux->dado);
+            else
+                printf("O valor %d nao foi localizado!", valor);
             break;
         case 2:
             printf("\nNo raiz: %d", tree->dado); // Se usuario escolheu ver a raiz
@@ -103,7 +107,7 @@ int main() {
             break;
         case 4:
             printf("\nNo(s) ramo: "); // Exibe somente os nos ramo
-            printarNosRamo(tree); // Raiz deve ser passada
+            printarNosRamo(tree);
             break;
         case 5:
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
