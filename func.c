@@ -79,9 +79,17 @@ int ehNoFolha(Arvore *tree) {
         return false;
 }
 
+// Verifica se o no é raiz
+int ehNoRaiz(Arvore *tree) {
+    if(tree->pai == NULL)
+        return true;
+    else
+        return false;
+}
+
 // Busca um no na arvore e o retorna
-Arvore* buscar(Arvore *tree,int valor) {
-    
+Arvore* buscar(Arvore *tree,int valor, int *ctd) {
+    *ctd = 0;
     while(tree != NULL) {
         if (tree->dado == valor)
             return tree;
@@ -89,6 +97,7 @@ Arvore* buscar(Arvore *tree,int valor) {
             tree = tree->esq;
         else
             tree = tree->dir;
+        (*ctd)++;
     }
     return tree;
 }
@@ -106,7 +115,7 @@ void printarNosFolha(Arvore *tree) {
 void printarNosRamo(Arvore *tree) {
     if (!estaVazia(tree)) {
         // Printa tudo que nao for no folha ou raiz
-        if (!ehNoFolha(tree) && tree->pai != NULL)
+        if (!ehNoFolha(tree) && !ehNoRaiz(tree))
             printf("%d ", tree->dado);
         printarNosRamo(tree->esq);
         printarNosRamo(tree->dir);
@@ -127,9 +136,21 @@ void printarDescendentes(Arvore *tree) {}
 
 void printarAncestrais(Arvore *tree) {}
 
-void preOrdem(Arvore *tree) {} //Gui
+void preOrdem(Arvore *tree) { //Gui
+    if(tree != NULL){
+        printf("%d ", tree->dado);
+        preOrdem(tree->esq);
+        preOrdem(tree->dir);
+    }
+} 
 
-void posOrdem(Arvore *tree) {} //Gui
+void posOrdem(Arvore *tree) { //Gui
+	if(tree != NULL){
+        posOrdem(tree->esq);
+        posOrdem(tree->dir);
+        printf("%d ", tree->dado);
+    }
+} 
 
 void emOrdem(Arvore *tree) {
     if (!estaVazia(tree)) {
