@@ -24,6 +24,6 @@ void printarAncestrais(Arvore *);
 void preOrdem(Arvore *);
 void posOrdem(Arvore *);
 void emOrdem(Arvore *);
-Arvore* buscar(Arvore *, int);
+Arvore* buscar(Arvore *, int, int*);
 
 #endif
