@@ -16,7 +16,7 @@
 int main() {
 
     Arvore *tree, *aux;
-    int resp, valor;
+    int resp, valor, ctd;
 
     iniciarArvore(&tree); // Gera um nó vazio
 
@@ -62,6 +62,8 @@ int main() {
 
     } while(resp != 2 && resp != 1); // Finaliza a exibicao do menu caso usuario responda <valor>
 
+    printf("\nDados armazenados com sucesso!!\n");
+
     do { // Exibe o menu até que o usuario o encerre
 
         printf( // Printa o segundo menu
@@ -91,22 +93,57 @@ int main() {
         case 1:
             printf("\nDigite um valor para busca: "); // Se usuario escolheu digitar os dados
             scanf("%d", &valor);
+            if ((aux = buscar(tree, valor, &ctd)) != NULL)
+                printf("O valor %d foi encontrado com %d pulos!", aux->dado, ctd);
+            else
+                printf("O valor %d nao foi localizado!", valor);
             break;
         case 2:
             printf("\nNo raiz: %d", tree->dado); // Se usuario escolheu ver a raiz
             break;
+        case 3:
+            printf("\nNo(s) folha: "); // Exibe somente os nos folha
+            printarNosFolha(tree);
+            break;
+        case 4:
+            printf("\nNo(s) ramo: "); // Exibe somente os nos ramo
+            printarNosRamo(tree);
+            break;
+        case 5:
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+        case 6:
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+        case 7:
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+        case 8:
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+        case 9:
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+       case 10:
+        	printf("\nPre-ordem: "); // Poe os dados ordem de processamento
+            preOrdem(tree);
+            break;
+        case 11:
+        	printf("\nPos-ordem: "); // Poe os dados em ordem decresente
+            posOrdem(tree);
+            break;
         case 12:
-            printf("\nEm ordem: ");
+            printf("\nEm ordem: "); // Pega os dados em ordem crescente
             emOrdem(tree);
             break;
         case 13:
-            printf("\nEncerrando...\n"); // Se usuario escolheu encerrar
+            printf("\nEncerrando..."); // Se usuario escolheu encerrar
             break;
         default:
-            printf("\nOpcao nao identificada!\n"); // Se usuario digitou uma opcao invalida
+            printf("\nOpcao nao identificada!"); // Se usuario digitou uma opcao invalida
             break;
         }
-
+        printf("\n"); //Pula uma linha apos exibir opcao acionada
     } while(resp != 13); // Finaliza a exibicao do menu caso usuario responda <valor>
 
     return 0;
