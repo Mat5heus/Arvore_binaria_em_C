@@ -123,7 +123,8 @@ void printarNosRamo(Arvore *tree) {
     } 
 }
 
-int alturaDaArvore(Arvore *tree) {} // Leo
+int alturaDaArvore(Arvore *tree) {} // Leo - EM DESENVOLVIMENTO
+/*
     if (r == NULL) 
       return -1; // altura da árvore vazia
    else {
@@ -132,6 +133,7 @@ int alturaDaArvore(Arvore *tree) {} // Leo
       if (ae < ad) return ad + 1;
       else return ae + 1;
    }
+*/
 
 int profundidadeDaArvore(Arvore *tree) {}
 
