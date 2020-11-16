@@ -92,20 +92,21 @@ Arvore* buscar(Arvore *tree,int valor, int *ctd) {
     *ctd = 0;
     while(tree != NULL) {
         if (tree->dado == valor)
-            return tree;
+            return tree; // Retorna o No caso ele seja encontrado
         else if (tree->dado > valor)
             tree = tree->esq;
         else
             tree = tree->dir;
-        (*ctd)++;
+        (*ctd)++; // conta os pulos
     }
-    return tree;
+    return tree; // Retorna NULL caso o No nao exista
 }
 
 // Printa somente os nos folha
 void printarNosFolha(Arvore *tree) {
     if (!estaVazia(tree)) {
-        if (ehNoFolha(tree)) // Printa so o que for folha
+        // Printa so o que for folha
+        if (ehNoFolha(tree))
             printf("%d ", tree->dado);
         printarNosFolha(tree->esq);
         printarNosFolha(tree->dir);
