@@ -6,11 +6,24 @@
 #define true 1
 #define false 0
 
-void mensagens(int cod, int valor) {
+void mensagensAviso(int cod, int valor) {
     printf("\nAVISO #%d: ", cod);
     switch (cod) {
     case 1:
         printf("O valor %d ja foi adicionado!", valor);
+        break;
+    default:
+        printf("Mensagem nao encontrada!");
+        break;
+    }
+
+    printf("\n");
+}
+void mensagensErro(int cod, char *nome) {
+    printf("\nERRO #%d: ", cod);
+    switch (cod) {
+    case 1:
+        printf("O arquivo \"%s\" nao foi aberto corretamente", nome);
         break;
     default:
         printf("Mensagem nao encontrada!");
@@ -42,15 +55,14 @@ void inserirNo(Arvore **tree, int valor) {
 
         *tree = novo;
     } else { 
-        if(aux->dado == valor)
-            mensagens(1, valor);
-        else if(aux->dado > valor)
+        if(aux->dado == valor) {
+            mensagensAviso(1, valor);
+            return;
+        } else if(aux->dado > valor)
             inserirNo(&aux->esq, valor);
         else
             inserirNo(&aux->dir,valor);
-    }
-
-     if(aux != NULL) {
+        
         if (aux->esq != NULL)
             if(aux->esq->pai == NULL)
                 aux->esq->pai = aux;
@@ -61,7 +73,25 @@ void inserirNo(Arvore **tree, int valor) {
       
 }
 
-void lerArquivo(Arvore **tree) {}
+void lerArquivo(Arvore **tree) {
+    int valor, ctd;
+    char *nome = "dados.txt";
+    FILE *arq;
+
+    arq = fopen(nome, "r");
+
+    if(arq == NULL) {
+        mensagensErro(1, nome);
+        exit(1);
+    }
+
+    for(ctd = 0; !feof(arq); ctd++) {
+        fscanf(arq, "%d", &valor);
+        inserirNo(tree, valor);
+    }
+
+    fclose(arq);
+}
 
 //verifica se o no esta vazio
 int estaVazia(Arvore *tree) {
