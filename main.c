@@ -50,6 +50,7 @@ int main() {
             break;
         case 2:
             printf("\nAbrindo arquivo...\n"); // Se usuario escolheu ler do arquivo
+            lerArquivo(&tree);
             break;
         case 3:
             printf("\nEncerrando...\n"); // Se usuario escolheu encerrar
