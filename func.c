@@ -12,6 +12,9 @@ void mensagensAviso(int cod, int valor) {
     case 1:
         printf("O valor %d ja foi adicionado!", valor);
         break;
+     case 2:
+        printf("O No %d nao foi localizado!", valor);
+        break;
     default:
         printf("Mensagem nao encontrada!");
         break;
@@ -118,8 +121,7 @@ int ehNoRaiz(Arvore *tree) {
 }
 
 // Busca um no na arvore e o retorna
-Arvore* buscar(Arvore *tree,int valor, int *ctd) {
-    *ctd = 0;
+Arvore* buscar(Arvore *tree,int valor) {
     while(tree != NULL) {
         if (tree->dado == valor)
             return tree; // Retorna o No caso ele seja encontrado
@@ -127,7 +129,6 @@ Arvore* buscar(Arvore *tree,int valor, int *ctd) {
             tree = tree->esq;
         else
             tree = tree->dir;
-        (*ctd)++; // conta os pulos
     }
     return tree; // Retorna NULL caso o No nao exista
 }
@@ -164,16 +165,16 @@ int alturaDoNo(Arvore *tree, int valor) {}
 int profundidoDoNo(Arvore *tree, int valor) {}
 
 void printarDescendentes(Arvore *tree, int valor) {
-    int ctd = 0;
-    Arvore *aux = buscar(tree, valor, &ctd);
-
-    while(!ehNoRaiz(aux)) {
-        aux = aux->pai;
-        printf("%d ", aux->dado);
-    }
+    emOrdem(tree->esq);
+    emOrdem(tree->dir);
 }
 
-void printarAncestrais(Arvore *tree, int valor) {}
+void printarAncestrais(Arvore *tree, int valor) {
+    while(!ehNoRaiz(tree)) {
+        tree = tree->pai;
+        printf("%d ", tree->dado);
+    }
+}
 
 void preOrdem(Arvore *tree) { //Gui
     if(tree != NULL){

@@ -94,10 +94,10 @@ int main() {
         case 1:
             printf("\nDigite um valor para busca: "); // Se usuario escolheu digitar os dados
             scanf("%d", &valor);
-            if ((aux = buscar(tree, valor, &ctd)) != NULL)
-                printf("O valor %d foi encontrado com %d pulos!", aux->dado, ctd);
+            if ((aux = buscar(tree, valor)) != NULL)
+                printf("O valor %d foi encontrado", aux->dado, ctd);
             else
-                printf("O valor %d nao foi localizado!", valor);
+                mensagensAviso(2, valor);
             break;
         case 2:
             printf("\nNo raiz: %d", tree->dado); // Se usuario escolheu ver a raiz
@@ -122,11 +122,24 @@ int main() {
         case 8:
             printf("Digite o no do qual deseja ver o descendentes: ");
             scanf("%d", &valor);
-            printf("\nDescendentes de %d: ", valor);
-            printarDescendentes(tree, valor);
+            aux = buscar(tree, valor);
+            if (estaVazia(aux))
+                mensagensAviso(2, valor);
+            else {
+                printf("\nDescendentes de %d: ", valor);
+                printarDescendentes(aux, valor);
+            }
             break;
         case 9:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("Digite o no do qual deseja ver o ancestrais: ");
+            scanf("%d", &valor);
+            aux = buscar(tree, valor);
+            if (estaVazia(aux))
+                mensagensAviso(2, valor);
+            else {
+                printf("\nAncestrais de %d: ", valor);
+                printarAncestrais(aux, valor);
+            }
             break;
        case 10:
         	printf("\nPre-ordem: "); // Poe os dados ordem de processamento
