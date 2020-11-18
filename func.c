@@ -160,9 +160,18 @@ int profundidadeDaArvore(Arvore *tree) {}
 
 int grauDoNo(Arvore *tree, int valor) {}
 
-int alturaDoNo(Arvore *tree, int valor) {}
+int alturaDoNo(Arvore *tree, int valor) {
+    int altura = 0;
+    while(!ehNoRaiz(tree)) {
+        tree = tree->pai;
+        altura++;
+    }
+    return altura;
+}
 
-int profundidoDoNo(Arvore *tree, int valor) {}
+int profundidadeDoNo(Arvore *tree, int valor) {
+
+}
 
 void printarDescendentes(Arvore *tree, int valor) {
     emOrdem(tree->esq);
