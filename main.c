@@ -24,7 +24,7 @@ int main() {
 
         printf( // Printa o menu
         "\n============== Menu =================\n"
-        "1) Digitar os dados\n"
+        "1) Digitar o dados\n"
         "2) Ler dados do arquivo\n"
         "3) Encerrar\n"
         "\n"
@@ -120,7 +120,10 @@ int main() {
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
             break;
         case 8:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("Digite o no do qual deseja ver o descendentes: ");
+            scanf("%d", &valor);
+            printf("\nDescendentes de %d: ", valor);
+            printarDescendentes(tree, valor);
             break;
         case 9:
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
