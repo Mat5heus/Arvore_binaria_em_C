@@ -18,7 +18,7 @@ int alturaDaArvore(Arvore *);
 int profundidadeDaArvore(Arvore *);
 int grauDoNo(Arvore *, int);
 int alturaDoNo(Arvore *, int);
-int profundidoDoNo(Arvore *, int);
+int profundidadeDoNo(Arvore *, int);
 void printarDescendentes(Arvore *, int);
 void printarAncestrais(Arvore *, int);
 void preOrdem(Arvore *);
