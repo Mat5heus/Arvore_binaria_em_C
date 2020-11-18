@@ -24,7 +24,7 @@ int main() {
 
         printf( // Printa o menu
         "\n============== Menu =================\n"
-        "1) Digitar o dados\n"
+        "1) Digitar os dados\n"
         "2) Ler dados do arquivo\n"
         "3) Encerrar\n"
         "\n"
@@ -75,13 +75,15 @@ int main() {
         "4) Mostrar nos ramo\n"
         "5) Altura da arvore\n"
         "6) Profundidade da Arvore\n"
-        "7) Grau do no\n"
-        "8) Descendentes do no\n"
-        "9) Ancestrais do no\n"
-        "10) Pre-ordem\n"
-        "11) Pos-ordem\n"
-        "12) Em-Ordem\n"
-        "13) Encerrar\n"
+        "7) Grau do No\n"
+        "8) Altura do No\n"
+        "9) Profundidade do No\n"
+        "10) Descendentes do No\n"
+        "11) Ancestrais do No\n"
+        "12) Pre-ordem\n"
+        "13) Pos-ordem\n"
+        "14) Em-Ordem\n"
+        "15) Encerrar\n"
         "\n"
         "Digite a opcao desejada: "
         );
@@ -119,8 +121,20 @@ int main() {
         case 7:
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
             break;
-        case 8:
-            printf("Digite o no do qual deseja ver o descendentes: ");
+         case 8:
+            printf("\nDigite o no que deseja saber a altura: "); // Por favor, comentar funcao
+            scanf("%d", &valor);
+            aux = buscar(tree, valor);
+            if (estaVazia(aux))
+                mensagensAviso(2, valor);
+            else
+                printf("\nAltura do No %d eh: %d", valor, alturaDoNo(aux, valor));
+            break;
+         case 9:
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+        case 10:
+            printf("Digite o No do qual deseja ver o descendentes: ");
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
@@ -130,8 +144,8 @@ int main() {
                 printarDescendentes(aux, valor);
             }
             break;
-        case 9:
-            printf("Digite o no do qual deseja ver o ancestrais: ");
+        case 11:
+            printf("Digite o No do qual deseja ver o ancestrais: ");
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
@@ -141,19 +155,19 @@ int main() {
                 printarAncestrais(aux, valor);
             }
             break;
-       case 10:
+       case 12:
         	printf("\nPre-ordem: "); // Poe os dados ordem de processamento
             preOrdem(tree);
             break;
-        case 11:
+        case 13:
         	printf("\nPos-ordem: "); // Poe os dados em ordem decresente
             posOrdem(tree);
             break;
-        case 12:
+        case 14:
             printf("\nEm ordem: "); // Pega os dados em ordem crescente
             emOrdem(tree);
             break;
-        case 13:
+        case 15:
             printf("\nEncerrando..."); // Se usuario escolheu encerrar
             break;
         default:
@@ -161,7 +175,7 @@ int main() {
             break;
         }
         printf("\n"); //Pula uma linha apos exibir opcao acionada
-    } while(resp != 13); // Finaliza a exibicao do menu caso usuario responda <valor>
+    } while(resp != 15); // Finaliza a exibicao do menu caso usuario responda <valor>
 
     return 0;
     
