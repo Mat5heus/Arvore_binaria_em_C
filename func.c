@@ -157,15 +157,23 @@ int alturaDaArvore(Arvore *tree) {}
 
 int profundidadeDaArvore(Arvore *tree) {}
 
-int grauDoNo(Arvore *tree) {}
+int grauDoNo(Arvore *tree, int valor) {}
 
-int alturaDoNo(Arvore *tree) {}
+int alturaDoNo(Arvore *tree, int valor) {}
 
-int profundidoDoNo(Arvore *tree) {}
+int profundidoDoNo(Arvore *tree, int valor) {}
 
-void printarDescendentes(Arvore *tree) {}
+void printarDescendentes(Arvore *tree, int valor) {
+    int ctd = 0;
+    Arvore *aux = buscar(tree, valor, &ctd);
 
-void printarAncestrais(Arvore *tree) {}
+    while(!ehNoRaiz(aux)) {
+        aux = aux->pai;
+        printf("%d ", aux->dado);
+    }
+}
+
+void printarAncestrais(Arvore *tree, int valor) {}
 
 void preOrdem(Arvore *tree) { //Gui
     if(tree != NULL){
