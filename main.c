@@ -6,8 +6,8 @@
  * Nome: Matheus Galvani de Camargo RA: 107285
  * Nome: Guilherme dos Santos Bueno Meyer RA: 107129
  * Nome: Tiago Moises Antonio RA: 89541
- * Nome: RA:
- * 
+ * Nome: Leonardo Garcia RA: 106939
+ * Nome: Marcelo Costa Correa RA: 104442
  */
 
 #include <time.h>
