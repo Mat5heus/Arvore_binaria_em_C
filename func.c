@@ -154,9 +154,34 @@ void printarNosRamo(Arvore *tree) {
     } 
 }
 
-int alturaDaArvore(Arvore *tree) {}
+int alturaDaArvore(Arvore *tree) {
+    int esq, dir;
+    if (estaVazia(tree))
+        return -1;
 
-int profundidadeDaArvore(Arvore *tree) {}
+    esq = alturaDaArvore(tree->esq);
+    dir = alturaDaArvore(tree->dir);
+
+    if (esq > dir)
+        return esq+1;
+    else
+        return dir+1;
+}
+
+int profundidadeDaArvore(Arvore *tree) {
+    int esq, dir;
+    if (estaVazia(tree))
+        return -1;
+
+    esq = profundidadeDaArvore(tree->esq);
+    dir = profundidadeDaArvore(tree->dir);
+
+    if (esq > dir)
+        return esq+1;
+    else
+        return dir+1;
+
+}
 
 int grauDoNo(Arvore *tree) {
     int filhos = 0;
@@ -168,13 +193,19 @@ int grauDoNo(Arvore *tree) {
     return filhos;
 }
 
-/*int alturaDoNo(Arvore *tree, int valor, int *ctd) {
-    
-    if (!estaVazia(tree)) {
-        profundidadeDoNo(tree->esq, valor, ctd);
-        profundidadeDoNo(tree->dir, valor, ctd);
-    } 
-}*/
+int alturaDoNo(Arvore *tree) {
+    int esq, dir;
+    if (estaVazia(tree))
+        return -1;
+
+    esq = alturaDoNo(tree->esq);
+    dir = alturaDoNo(tree->dir);
+
+    if (esq > dir)
+        return esq+1;
+    else
+        return dir+1;
+}
 
 int profundidadeDoNo(Arvore *tree) {
     int profundidade = 0;

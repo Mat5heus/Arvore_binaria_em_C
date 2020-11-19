@@ -10,8 +10,8 @@
  * 
  */
 
+#include <time.h>
 #include "func.c"
-
 
 int main() {
 
@@ -26,7 +26,8 @@ int main() {
         "\n============== Menu =================\n"
         "1) Digitar os dados\n"
         "2) Ler dados do arquivo\n"
-        "3) Encerrar\n"
+        "3) Preencher automaticamente\n"
+        "4) Encerrar\n"
         "\n"
         "Digite a opcao desejada: "
         );
@@ -49,10 +50,18 @@ int main() {
             } while(valor != -1);
             break;
         case 2:
-            printf("\nAbrindo arquivo...\n"); // Se usuario escolheu ler do arquivo
+            printf("\nAbrindo arquivo para leitura...\n"); // Se usuario escolheu ler do arquivo
             lerArquivo(&tree);
             break;
         case 3:
+            printf("\nPreencher arvore com quantos valores aleatorios: ");
+            scanf("%d", &valor);
+            printf("\nGerando valores aleatorios de 0 a 100...\n"); // Se usuario escolheu ler do arquivo
+            srand(time(NULL));
+            for(ctd = 0; ctd < valor; ctd++)
+                inserirNo(&tree, rand() % 100);
+            break;
+        case 4:
             printf("\nEncerrando...\n"); // Se usuario escolheu encerrar
             exit(0); // Finaliza a execucao do programa e retorna 0
             break;
@@ -61,7 +70,7 @@ int main() {
             break;
         }
 
-    } while(resp != 2 && resp != 1); // Finaliza a exibicao do menu caso usuario responda <valor>
+    } while(resp < 1 || resp > 4); // Finaliza a exibicao do menu caso usuario responda <valor>
 
     printf("\nDados armazenados com sucesso!!\n");
 
@@ -89,7 +98,7 @@ int main() {
         );
 
         // Pega a resposta do usuario
-        scanf("%d", &resp); 
+        scanf(" %d", &resp); 
 
         // Usa a resposta do usuario para iniciar uma acao
         switch (resp) {
@@ -113,16 +122,28 @@ int main() {
             printarNosRamo(tree);
             break;
         case 5:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("\nAltura da arvore: %d", alturaDaArvore(tree)); // Por favor, comentar funcao
             break;
         case 6:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("\nProfundidade da arvore: %d", profundidadeDaArvore(tree)); // Por favor, comentar funcao
             break;
         case 7:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("\nDigite o No que deseja saber a grau: "); // Por favor, comentar funcao
+            scanf("%d", &valor);
+            aux = buscar(tree, valor);
+            if (estaVazia(aux))
+                mensagensAviso(2, valor);
+            else
+                printf("\nGrau do No %d: %d", valor, grauDoNo(aux));
             break;
          case 8:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            printf("\nDigite o no que deseja saber a altura: "); // Por favor, comentar funcao
+            scanf("%d", &valor);
+            aux = buscar(tree, valor);
+            if (estaVazia(aux))
+                mensagensAviso(2, valor);
+            else
+                printf("\nAltura do No %d: %d", valor, alturaDoNo(aux));
             break;
          case 9:
             printf("\nDigite o no que deseja saber a profundidade: "); // Por favor, comentar funcao
@@ -131,7 +152,7 @@ int main() {
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
             else
-                printf("\nProfundidade do No %d eh: %d", valor, profundidadeDoNo(aux));
+                printf("\nProfundidade do No %d: %d", valor, profundidadeDoNo(aux));
             break;
         case 10:
             printf("Digite o No do qual deseja ver o descendentes: ");
