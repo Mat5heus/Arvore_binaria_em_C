@@ -122,16 +122,16 @@ int main() {
             printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
             break;
          case 8:
-            printf("\nDigite o no que deseja saber a altura: "); // Por favor, comentar funcao
+            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+            break;
+         case 9:
+            printf("\nDigite o no que deseja saber a profundidade: "); // Por favor, comentar funcao
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
             else
-                printf("\nAltura do No %d eh: %d", valor, alturaDoNo(aux, valor));
-            break;
-         case 9:
-            printf("\nFuncao ainda nao definida!"); // Por favor, comentar funcao
+                printf("\nProfundidade do No %d eh: %d", valor, profundidadeDoNo(aux));
             break;
         case 10:
             printf("Digite o No do qual deseja ver o descendentes: ");

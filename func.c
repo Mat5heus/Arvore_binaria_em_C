@@ -158,19 +158,31 @@ int alturaDaArvore(Arvore *tree) {}
 
 int profundidadeDaArvore(Arvore *tree) {}
 
-int grauDoNo(Arvore *tree, int valor) {}
-
-int alturaDoNo(Arvore *tree, int valor) {
-    int altura = 0;
-    while(!ehNoRaiz(tree)) {
-        tree = tree->pai;
-        altura++;
-    }
-    return altura;
+int grauDoNo(Arvore *tree) {
+    int filhos = 0;
+    if (tree->dir != NULL)
+        filhos++;
+    if(tree->esq != NULL)
+        filhos++;
+    
+    return filhos;
 }
 
-int profundidadeDoNo(Arvore *tree, int valor) {
+/*int alturaDoNo(Arvore *tree, int valor, int *ctd) {
+    
+    if (!estaVazia(tree)) {
+        profundidadeDoNo(tree->esq, valor, ctd);
+        profundidadeDoNo(tree->dir, valor, ctd);
+    } 
+}*/
 
+int profundidadeDoNo(Arvore *tree) {
+    int profundidade = 0;
+    while(!ehNoRaiz(tree)) {
+        tree = tree->pai;
+        profundidade++;
+    }
+    return profundidade;
 }
 
 void printarDescendentes(Arvore *tree, int valor) {
