@@ -4,8 +4,8 @@
  * Desenvolvedores
  * Nome: Matheus do carmo Santos RA: 106020 
  * Nome: Matheus Galvani de Camargo RA: 107285
- * Nome: RA:
- * Nome: RA:
+ * Nome: Guilherme dos Santos Bueno Meyer RA: 107129
+ * Nome: Tiago Moises Antonio RA: 89541
  * Nome: RA:
  * 
  */
