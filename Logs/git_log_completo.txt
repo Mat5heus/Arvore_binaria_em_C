@@ -1,3 +1,35 @@
+commit ded7eb868e07cb57bac0f17dda668933e70bab00
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 17:25:33 2020 -0300
+
+    Exclução de funções repetidas e Adicao de avisos
+
+ arvore.h |  4 +---
+ func.c   | 43 ++++++++++---------------------------------
+ 2 files changed, 11 insertions(+), 36 deletions(-)
+
+commit 7f7f09e3fcc8207d76dc9e8545c01ba00e6c53f9
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 17:24:23 2020 -0300
+
+    Aprimoramentos de interface e adição de comentarios
+
+ main.c | 26 +++++++++++++++-----------
+ 1 file changed, 15 insertions(+), 11 deletions(-)
+
+commit d6b1e8f33ba571b59925f6fb91a7bff11159585c
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 15:36:34 2020 -0300
+
+    Adição de logs e alteração no nome do repositorio
+
+ Logs/git_log.txt          |  55 +++++
+ Logs/git_log_completo.txt | 509 ++++++++++++++++++++++++++++++++++++++++++++++
+ Logs/origin.txt           |   2 +
+ README.md                 |   7 +-
+ main.c                    |   1 +
+ 5 files changed, 573 insertions(+), 1 deletion(-)
+
 commit 543aa0985f5db01221688860e4386d717f78da4e
 Author: leonardoprog21 <74159225+leonardoprog21@users.noreply.github.com>
 Date:   Thu Nov 19 18:20:41 2020 -0300

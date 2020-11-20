@@ -1,3 +1,6 @@
+ded7eb8 - Mat5heus (Fri Nov 20 17:25:33 2020 -0300) Exclução de funções repetidas e Adicao de avisos
+7f7f09e - Mat5heus (Fri Nov 20 17:24:23 2020 -0300) Aprimoramentos de interface e adição de comentarios
+d6b1e8f - Mat5heus (Fri Nov 20 15:36:34 2020 -0300) Adição de logs e alteração no nome do repositorio
 543aa09 - leonardoprog21 (Thu Nov 19 18:20:41 2020 -0300) Update main.c
 29c5611 - M3yer (Thu Nov 19 17:49:55 2020 -0300) Update main.c
 ab80493 - Mat5heus (Thu Nov 19 17:29:50 2020 -0300) Todos os cases foram implementados e agora a arvore faz preenchimento automático
