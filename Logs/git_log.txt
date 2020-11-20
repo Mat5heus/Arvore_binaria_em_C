@@ -1,0 +1,55 @@
+543aa09 - leonardoprog21 (Thu Nov 19 18:20:41 2020 -0300) Update main.c
+29c5611 - M3yer (Thu Nov 19 17:49:55 2020 -0300) Update main.c
+ab80493 - Mat5heus (Thu Nov 19 17:29:50 2020 -0300) Todos os cases foram implementados e agora a arvore faz preenchimento automático
+d2bb100 - Mat5heus (Thu Nov 19 13:58:55 2020 -0300) Inversao de funcoes e diminuicao de variaveis
+53fb2db - Mat5heus (Wed Nov 18 18:11:00 2020 -0300) Implementacão da funcao altura do no
+7575e9e - Mat5heus (Wed Nov 18 18:09:40 2020 -0300) Correcao do nome da funcão
+d798b3b - Mat5heus (Wed Nov 18 18:08:59 2020 -0300) Adicao de mais opcões ao sub-menu
+4d6933b - Mat5heus (Wed Nov 18 17:31:40 2020 -0300) Adicao de mensagem de aviso, buscar não mais conta pulos, simplificacao da funcao descendentes e implementação de ancestrais (case 9)
+35f69f3 - Mat5heus (Wed Nov 18 16:50:16 2020 -0300) Implementacao do case 8 (descendentes)
+c19ffdd - Mat5heus (Wed Nov 18 16:49:42 2020 -0300) Adição de alguns paramentros necessario para a execução da funcao
+8d3a0bd - Mat5heus (Wed Nov 18 16:48:12 2020 -0300) Mudança na organização dos dados
+b6f15de - Mat5heus (Tue Nov 17 15:04:32 2020 -0300) Implementação do case 2 do menu
+b35127c - Mat5heus (Tue Nov 17 15:03:58 2020 -0300) Alteracao de nome de 'mensagens' e implementacao de lerArquivo
+a2473ca - Mat5heus (Tue Nov 17 15:02:48 2020 -0300) Adicao de arquivo que podera ser lido durante a execução
+f1334bf - Mat5heus (Mon Nov 16 17:10:55 2020 -0300) Adicao de comentarios
+7759c23 - Mat5heus (Sun Nov 15 17:59:44 2020 -0300) Contar agora recebe um contador
+7dbff9b - Mat5heus (Sun Nov 15 17:59:17 2020 -0300) Foram adicinadas funcoes de verificacao de raiz, pre-ordem e pos-ordem e buscar agora conta os pulos
+bb71cf1 - Mat5heus (Sun Nov 15 17:56:19 2020 -0300) Agora busca conta os pulos, case 10 e 11 tem funcao (@M3yer) e comentarios foram adicionados
+9ba2ed2 - Mat5heus (Sun Nov 15 13:00:15 2020 -0300) remoção de comentario e implementacao do case 1 (buscar)
+d72bb28 - Mat5heus (Sun Nov 15 12:59:16 2020 -0300) Implementacao da funcao buscar
+a2e89ea - Mat5heus (Sat Nov 14 17:33:37 2020 -0300) Não há mais a necessidade de passagem de raiz
+87b94ff - Mat5heus (Sat Nov 14 17:33:12 2020 -0300) Agora inserir No adiciona um pai aos nos e a funcao ramo identifica raiz
+dcb8a08 - Mat5heus (Sat Nov 14 17:32:07 2020 -0300) Nao ha mais necessidade de passagem de raiz
+786b5d2 - Mat5heus (Sat Nov 14 16:50:38 2020 -0300) Implementacao de case 4 e adicao de comentarios
+5ce4086 - Mat5heus (Sat Nov 14 16:49:56 2020 -0300) Adicao de comentarios e implementação de nosRamo (que agora recebe raiz)
+94bacff - Mat5heus (Sat Nov 14 16:48:11 2020 -0300) Printar raiz não tem mais necessidade e printar ramo agr usa o valor da raiz
+621d6d2 - Mat5heus (Sat Nov 14 16:08:30 2020 -0300) Implementacao de printarNosFolha e adicao de funcao de verificacao ehNoFolha
+3306961 - Mat5heus (Sat Nov 14 16:07:31 2020 -0300) Implementacao do case 3 no sub-menu
+02de3cc - Mat5heus (Sat Nov 14 14:33:43 2020 -0300) Alteracao de ERRO para AVISO e diminuicao de \n
+eccc8c9 - Mat5heus (Sat Nov 14 14:31:12 2020 -0300) Adicao de opcoes, comentarios e reducao de codigo
+f297fd2 - Mat5heus (Tue Nov 10 23:47:38 2020 -0300) 'lerDoUsuario adicionado ao main por problemas de endereçamento dentro da funcao'
+22f5991 - Mat5heus (Tue Nov 10 23:45:57 2020 -0300) 'lerDoUsuario retirada por nao haver mais necessecidade, ja que sua funcao foi movida para o main'
+7455b68 - Mat5heus (Tue Nov 10 23:44:32 2020 -0300) 'funcoes de lerDoUsuario movido para o main por questoes de endereçamento da struct'
+ace13d9 - Mat5heus (Tue Nov 10 23:23:05 2020 -0300) 'Adição de mais um executável'
+f45c7eb - Mat5heus (Tue Nov 10 16:15:40 2020 -0300) 'Correcao visual, adicao de variavel, melhora de comentarios e ativacao de 2 e 12 no menu'
+10dd2d0 - Mat5heus (Tue Nov 10 16:13:41 2020 -0300) 'implementacao de mensagens (em uma funcao unica), inserir (nao esta pegando), emOrdem, lerDoUsuario e printarRaiz'
+99cd820 - Mat5heus (Tue Nov 10 16:11:21 2020 -0300) 'PrintarRaiz agora tem retorno e lerUsuario tem menos acesso a arvore'
+a77fc57 - Mat5heus (Mon Nov 9 21:37:33 2020 -0300) 'Exclusão da funcao <printarMain> e implementacao direto no main'
+6c923a3 - Mat5heus (Mon Nov 9 21:35:59 2020 -0300) 'Ampliação e quebra do menu (agora no main) em dois, adicao de loop'
+d8a591c - Mat5heus (Sat Nov 7 17:07:46 2020 -0300) 'Exclusão do arquivo executavel'
+fb507ca - Mat5heus (Sat Nov 7 17:02:47 2020 -0300) 'Adição do main(executavel)'
+d659e8d - Mat5heus (Sat Nov 7 17:01:54 2020 -0300) 'Adicao de comentarios, tranferencia de stdio para func e chamada com menu com switch'
+78ac579 - Mat5heus (Sat Nov 7 16:58:55 2020 -0300) 'Inclusao do stdio.h, implementação menu interativo e reduzação de linhas não utlizadas'
+4955578 - Mat5heus (Sat Nov 7 14:33:43 2020 -0300) 'Adição de funcoes e parametros'
+77998c7 - Mat5heus (Sat Nov 7 14:32:45 2020 -0300) 'Adição da funções do projeto'
+99325e5 - Mat5heus (Sat Nov 7 13:12:13 2020 -0300) 'Mudança de constantes para func.c'
+8276ba0 - Mat5heus (Sat Nov 7 13:11:13 2020 -0300) 'Adição de funções necessarias'
+b476a28 - Mat5heus (Sat Nov 7 13:10:23 2020 -0300) 'Primeira função do cabeçalho'
+6904c3a - Mat5heus (Fri Nov 6 21:23:44 2020 -0300) 'Inclusão de novas informações sobre desenvolvedores'
+ba37a30 - Mat5heus (Fri Nov 6 21:22:46 2020 -0300) 'Adição de métodos que poderam ser implementados'
+49ff48d - Mat5heus (Fri Nov 6 21:22:06 2020 -0300) 'Mudanca de nomes das variaveis da struct'
+043b0b2 - Mat5heus (Tue Nov 3 19:30:49 2020 -0300) 'Adição de estrutura basica'
+46213f9 - Mat5heus (Tue Nov 3 19:20:56 2020 -0300) 'Adição de estrutura basica'
+6d69333 - Mat5heus (Tue Nov 3 18:51:31 2020 -0300) Inclusão de arquivos principais
+10cf2a0 - Matheus Santos (Tue Nov 3 13:41:55 2020 -0300) Initial commit

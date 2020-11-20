@@ -1,0 +1,2 @@
+origin	https://github.com/Mat5heus/Arvore_binaria_em_C.git (fetch)
+origin	https://github.com/Mat5heus/Arvore_binaria_em_C.git (push)
