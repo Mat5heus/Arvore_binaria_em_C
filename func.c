@@ -12,8 +12,14 @@ void mensagensAviso(int cod, int valor) {
     case 1:
         printf("O valor %d ja foi adicionado!", valor);
         break;
-     case 2:
+    case 2:
         printf("O No %d nao foi localizado!", valor);
+        break;
+    case 3:
+        printf("O No %d nao possui descendentes! (folha)", valor);
+        break;
+    case 4:
+        printf("O No %d nao possui ancestrais! (raiz)", valor);
         break;
     default:
         printf("Mensagem nao encontrada!");
@@ -154,33 +160,18 @@ void printarNosRamo(Arvore *tree) {
     } 
 }
 
-int alturaDaArvore(Arvore *tree) {
+int alturaEProfundidade(Arvore *tree) {
     int esq, dir;
     if (estaVazia(tree))
         return -1;
 
-    esq = alturaDaArvore(tree->esq);
-    dir = alturaDaArvore(tree->dir);
+    esq = alturaEProfundidade(tree->esq);
+    dir = alturaEProfundidade(tree->dir);
 
     if (esq > dir)
         return esq+1;
     else
         return dir+1;
-}
-
-int profundidadeDaArvore(Arvore *tree) {
-    int esq, dir;
-    if (estaVazia(tree))
-        return -1;
-
-    esq = profundidadeDaArvore(tree->esq);
-    dir = profundidadeDaArvore(tree->dir);
-
-    if (esq > dir)
-        return esq+1;
-    else
-        return dir+1;
-
 }
 
 int grauDoNo(Arvore *tree) {
@@ -191,20 +182,6 @@ int grauDoNo(Arvore *tree) {
         filhos++;
     
     return filhos;
-}
-
-int alturaDoNo(Arvore *tree) {
-    int esq, dir;
-    if (estaVazia(tree))
-        return -1;
-
-    esq = alturaDoNo(tree->esq);
-    dir = alturaDoNo(tree->dir);
-
-    if (esq > dir)
-        return esq+1;
-    else
-        return dir+1;
 }
 
 int profundidadeDoNo(Arvore *tree) {
