@@ -57,10 +57,10 @@ int main() {
         case 3:
             printf("\nPreencher arvore com quantos valores aleatorios: ");
             scanf("%d", &valor);
-            printf("\nGerando valores aleatorios de 0 a 100...\n"); // Se usuario escolheu ler do arquivo
-            srand(time(NULL));
-            for(ctd = 0; ctd < valor; ctd++)
-                inserirNo(&tree, rand() % 100);
+            printf("\nPreenchendo com valores aleatorios de 0 a 100...\n"); // Se usuario escolheu ler do arquivo
+            srand(time(NULL)); // Passa valores diferentes para evitar repeticoes no rand
+            for(ctd = 0; ctd < valor; ctd++) // Insere a quantidade desejado pelo usuario
+                inserirNo(&tree, rand() % 100); // (% 100) limita a faixa de de numeros entre 0 - 100
             break;
         case 4:
             printf("\nEncerrando...\n"); // Se usuario escolheu encerrar
@@ -107,7 +107,7 @@ int main() {
             printf("\nDigite um valor para busca: "); // Se usuario escolheu digitar os dados
             scanf("%d", &valor);
             if ((aux = buscar(tree, valor)) != NULL)
-                printf("O valor %d foi encontrado", aux->dado, ctd);
+                printf("\nO valor %d foi encontrado!", aux->dado, ctd);
             else
                 mensagensAviso(2, valor);
             break;
@@ -123,10 +123,10 @@ int main() {
             printarNosRamo(tree);
             break;
         case 5:
-            printf("\nAltura da arvore: %d", alturaDaArvore(tree)); // Por favor, comentar funcao
+            printf("\nAltura da arvore: %d", alturaEProfundidade(tree)); // Por favor, comentar funcao
             break;
         case 6:
-            printf("\nProfundidade da arvore: %d", profundidadeDaArvore(tree)); // Por favor, comentar funcao
+            printf("\nProfundidade da arvore: %d", alturaEProfundidade(tree)); // Por favor, comentar funcao
             break;
         case 7:
             printf("\nDigite o No que deseja saber a grau: "); // Por favor, comentar funcao
@@ -144,7 +144,7 @@ int main() {
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
             else
-                printf("\nAltura do No %d: %d", valor, alturaDoNo(aux));
+                printf("\nAltura do No %d: %d", valor, alturaEProfundidade(aux));
             break;
          case 9:
             printf("\nDigite o no que deseja saber a profundidade: "); // Por favor, comentar funcao
@@ -156,22 +156,26 @@ int main() {
                 printf("\nProfundidade do No %d: %d", valor, profundidadeDoNo(aux));
             break;
         case 10:
-            printf("Digite o No do qual deseja ver o descendentes: ");
+            printf("\nDigite o No do qual deseja ver o descendentes: ");
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
+            else if(!grauDoNo(aux))
+                mensagensAviso(3, valor);
             else {
                 printf("\nDescendentes de %d: ", valor);
                 printarDescendentes(aux, valor);
             }
             break;
         case 11:
-            printf("Digite o No do qual deseja ver o ancestrais: ");
+            printf("\nDigite o No do qual deseja ver o ancestrais: ");
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
+            else if(ehNoRaiz(aux))
+                mensagensAviso(4, valor);
             else {
                 printf("\nAncestrais de %d: ", valor);
                 printarAncestrais(aux, valor);
