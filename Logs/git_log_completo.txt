@@ -1,0 +1,614 @@
+commit f916b57800a9d3d205ba76ace6bc1336ae5e7ce8
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 13:43:59 2020 -0300
+
+    Alteracao e adicao de comentarios
+
+ main.c | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+commit b5149000063302158da450169613b022a6627213
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 13:33:32 2020 -0300
+
+    Troca de nome
+
+ ...IONAMENTO DO C\303\223DIGO.pdf" => Manual_do_usuario.pdf | Bin
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a68b85a8d575c2e3620d6b16be8852d137a3d4d6
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 13:33:20 2020 -0300
+
+    Adicao de comentarios
+
+ README.md |  2 +-
+ func.c    | 61 ++++++++++++++++++++++++++++++++-----------------------------
+ 2 files changed, 33 insertions(+), 30 deletions(-)
+
+commit 43d6716339ccb1dd6d5b5c769fbbca081e753e93
+Merge: 767f7b2 0e5a1c6
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 12:18:50 2020 -0300
+
+    Merge branch 'desenvolvimento' of https://github.com/Mat5heus/Arvore_binaria_em_C into desenvolvimento
+
+commit 0e5a1c6c4f84d886b2a522f79dd0aa659ae626f1
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Sat Nov 21 14:35:46 2020 -0300
+
+    Add files via upload
+
+ "GUIA DE FUNCIONAMENTO DO C\303\223DIGO.pdf" | Bin 0 -> 72399 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a191d8156ad5c0b0c15fc06ee053113e218c0955
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Sat Nov 21 14:34:42 2020 -0300
+
+    Delete GUIA DE FUNCIONAMENTO DO CÓDIGO.pdf
+
+ "GUIA DE FUNCIONAMENTO DO C\303\223DIGO.pdf" | Bin 72279 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 70b65101cbac1eb5daaaa09a0a292993384659bb
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Sat Nov 21 14:20:12 2020 -0300
+
+    Add files via upload
+
+ "GUIA DE FUNCIONAMENTO DO C\303\223DIGO.pdf" | Bin 0 -> 72279 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 767f7b24a1ffda89e42057fd98fa63fec711766e
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 17:32:08 2020 -0300
+
+    Adição de informações básicas
+
+ Logs/git_log.txt          |  3 +++
+ Logs/git_log_completo.txt | 32 ++++++++++++++++++++++++++++++++
+ README.md                 |  6 ++++--
+ 3 files changed, 39 insertions(+), 2 deletions(-)
+
+commit ded7eb868e07cb57bac0f17dda668933e70bab00
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 17:25:33 2020 -0300
+
+    Exclução de funções repetidas e Adicao de avisos
+
+ arvore.h |  4 +---
+ func.c   | 43 ++++++++++---------------------------------
+ 2 files changed, 11 insertions(+), 36 deletions(-)
+
+commit 7f7f09e3fcc8207d76dc9e8545c01ba00e6c53f9
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 17:24:23 2020 -0300
+
+    Aprimoramentos de interface e adição de comentarios
+
+ main.c | 26 +++++++++++++++-----------
+ 1 file changed, 15 insertions(+), 11 deletions(-)
+
+commit d6b1e8f33ba571b59925f6fb91a7bff11159585c
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 15:36:34 2020 -0300
+
+    Adição de logs e alteração no nome do repositorio
+
+ Logs/git_log.txt          |  55 +++++
+ Logs/git_log_completo.txt | 509 ++++++++++++++++++++++++++++++++++++++++++++++
+ Logs/origin.txt           |   2 +
+ README.md                 |   7 +-
+ main.c                    |   1 +
+ 5 files changed, 573 insertions(+), 1 deletion(-)
+
+commit 543aa0985f5db01221688860e4386d717f78da4e
+Author: leonardoprog21 <74159225+leonardoprog21@users.noreply.github.com>
+Date:   Thu Nov 19 18:20:41 2020 -0300
+
+    Update main.c
+
+ main.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 29c5611757d2ca82297728653221f687bddda8d6
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Thu Nov 19 17:49:55 2020 -0300
+
+    Update main.c
+
+ main.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit ab8049338fa4db5b2f093e1bd6f293fe1d5ea7f6
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Thu Nov 19 17:29:50 2020 -0300
+
+    Todos os cases foram implementados e agora a arvore faz preenchimento automático
+
+ arvore.h |  2 +-
+ func.c   | 49 ++++++++++++++++++++++++++++++++++++++++---------
+ main.c   | 41 +++++++++++++++++++++++++++++++----------
+ 3 files changed, 72 insertions(+), 20 deletions(-)
+
+commit d2bb100be1be99de18c5672debf795e6357732e1
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Thu Nov 19 13:58:55 2020 -0300
+
+    Inversao de funcoes e diminuicao de variaveis
+
+ arvore.h |  6 +++---
+ func.c   | 30 +++++++++++++++++++++---------
+ main.c   | 10 +++++-----
+ 3 files changed, 29 insertions(+), 17 deletions(-)
+
+commit 53fb2dbe4ccfc6adffbde73a107887fccc6cac9f
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 18:11:00 2020 -0300
+
+    Implementacão da funcao altura do no
+
+ func.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+
+commit 7575e9ed25b81a4b0eea76459d7bea60fb1d0b9b
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 18:09:40 2020 -0300
+
+    Correcao do nome da funcão
+
+ arvore.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d798b3b69ad4e09714a44dfd28c8eef0aac6bdc9
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 18:08:59 2020 -0300
+
+    Adicao de mais opcões ao sub-menu
+
+ main.c | 48 +++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 31 insertions(+), 17 deletions(-)
+
+commit 4d6933baac01e2b535445f89e2dc7ac7dc2b040c
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 17:31:40 2020 -0300
+
+    Adicao de mensagem de aviso, buscar não mais conta pulos, simplificacao da funcao descendentes e implementação de ancestrais (case 9)
+
+ arvore.h |  2 +-
+ func.c   | 21 +++++++++++----------
+ main.c   | 25 +++++++++++++++++++------
+ 3 files changed, 31 insertions(+), 17 deletions(-)
+
+commit 35f69f3ba3fc8f15b31fff29ca8b570225b3c571
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 16:50:16 2020 -0300
+
+    Implementacao do case 8 (descendentes)
+
+ main.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+commit c19ffdd93b459bacfcf93e97f40d63c53a821a33
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 16:49:42 2020 -0300
+
+    Adição de alguns paramentros necessario para a execução da funcao
+
+ arvore.h | 10 +++++-----
+ func.c   | 18 +++++++++++++-----
+ 2 files changed, 18 insertions(+), 10 deletions(-)
+
+commit 8d3a0bd87843564b58b6a4abddeddb66ffaf63f3
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Wed Nov 18 16:48:12 2020 -0300
+
+    Mudança na organização dos dados
+
+ dados.txt | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+commit b6f15def1e6d812ff14f604575687e84c13d6f63
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 17 15:04:32 2020 -0300
+
+    Implementação do case 2 do menu
+
+ main.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit b35127c18ec1626170cec4bd6880c9553d3e908e
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 17 15:03:58 2020 -0300
+
+    Alteracao de nome de 'mensagens' e implementacao de lerArquivo
+
+ func.c | 46 ++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 38 insertions(+), 8 deletions(-)
+
+commit a2473cad4f9d657f3ec74dd51f4c3b86a31d4907
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 17 15:02:48 2020 -0300
+
+    Adicao de arquivo que podera ser lido durante a execução
+
+ dados.txt | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit f1334bff542e85eac42176c6c934edf7070cf398
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Mon Nov 16 17:10:55 2020 -0300
+
+    Adicao de comentarios
+
+ func.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+commit 7759c231b955947dc867fb31c4a762f62add8633
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 15 17:59:44 2020 -0300
+
+    Contar agora recebe um contador
+
+ arvore.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7dbff9b723abcdd71554c2c2d87dbb18b54e137c
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 15 17:59:17 2020 -0300
+
+    Foram adicinadas funcoes de verificacao de raiz, pre-ordem e pos-ordem e buscar agora conta os pulos
+
+ func.c | 31 ++++++++++++++++++++++++++-----
+ 1 file changed, 26 insertions(+), 5 deletions(-)
+
+commit bb71cf1d2f434fd52afe94224d62b652312fa8cf
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 15 17:56:19 2020 -0300
+
+    Agora busca conta os pulos, case 10 e 11 tem funcao (@M3yer) e comentarios foram adicionados
+
+ main.c | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+
+commit 9ba2ed28b74a5daabc92c912a1cf2f486beb8568
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 15 13:00:15 2020 -0300
+
+    remoção de comentario e implementacao do case 1 (buscar)
+
+ main.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit d72bb2883de45d218444c6c7f1dc01cd4c0d0416
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 15 12:59:16 2020 -0300
+
+    Implementacao da funcao buscar
+
+ func.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+commit a2e89eac2085d47895ac415a6564ebeeee29a523
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 17:33:37 2020 -0300
+
+    Não há mais a necessidade de passagem de raiz
+
+ main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 87b94ffd97f2bc54830852d7b99bccfd40534abc
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 17:33:12 2020 -0300
+
+    Agora inserir No adiciona um pai aos nos e a funcao ramo identifica raiz
+
+ func.c | 23 +++++++++++++++++------
+ 1 file changed, 17 insertions(+), 6 deletions(-)
+
+commit dcb8a08382d01c550589d838df92f236b1cd6383
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 17:32:07 2020 -0300
+
+    Nao ha mais necessidade de passagem de raiz
+
+ arvore.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 786b5d2fd5e3b3cd0ffef59a02175fb01ab4f62b
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 16:50:38 2020 -0300
+
+    Implementacao de case 4 e adicao de comentarios
+
+ main.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 5ce40860cb4f65ce07ff01308e43bc4c3a0f6fb7
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 16:49:56 2020 -0300
+
+    Adicao de comentarios e implementação de nosRamo (que agora recebe raiz)
+
+ func.c | 23 ++++++++++++++---------
+ 1 file changed, 14 insertions(+), 9 deletions(-)
+
+commit 94bacffc22b32d8eae8e5e7326b1a86a8c4d40cb
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 16:48:11 2020 -0300
+
+    Printar raiz não tem mais necessidade e printar ramo agr usa o valor da raiz
+
+ arvore.h | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 621d6d201bb58e02ea6f2de01604a16b6cb583d8
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 16:08:30 2020 -0300
+
+    Implementacao de printarNosFolha e adicao de funcao de verificacao ehNoFolha
+
+ func.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+commit 3306961f76e2e6e3f01c9884b0ab038b4a3c59f1
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 16:07:31 2020 -0300
+
+    Implementacao do case 3 no sub-menu
+
+ main.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 02de3cce4edd10a07437264c0ffc18a46500644e
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 14:33:43 2020 -0300
+
+    Alteracao de ERRO para AVISO e diminuicao de \n
+
+ func.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit eccc8c925d85d47e3aa0e94c54321d8ce65db9c3
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 14 14:31:12 2020 -0300
+
+    Adicao de opcoes, comentarios e reducao de codigo
+
+ main.c | 37 +++++++++++++++++++++++++++++++++----
+ 1 file changed, 33 insertions(+), 4 deletions(-)
+
+commit f297fd200b5168c4d841ff7dab8987fc9303f914
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 23:47:38 2020 -0300
+
+    'lerDoUsuario adicionado ao main por problemas de endereçamento dentro da funcao'
+
+ main.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+commit 22f5991c7c0a9b56a86c51de12ae3b5d65d136eb
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 23:45:57 2020 -0300
+
+    'lerDoUsuario retirada por nao haver mais necessecidade, ja que sua funcao foi movida para o main'
+
+ arvore.h | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 7455b68d9a818ba07d974c82ea3fa9d862c42395
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 23:44:32 2020 -0300
+
+    'funcoes de lerDoUsuario movido para o main por questoes de endereçamento da struct'
+
+ func.c | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+commit ace13d9e9a5c5ec7a628dd4b339637a32b2f80bb
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 23:23:05 2020 -0300
+
+    'Adição de mais um executável'
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit f45c7eb51d39563bfc87fcf5983f3d0d3b3bebcd
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 16:15:40 2020 -0300
+
+    'Correcao visual, adicao de variavel, melhora de comentarios e ativacao de 2 e 12 no menu'
+
+ main.c | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+commit 10dd2d0c4f47602d3c4dd28854934db1112b8e79
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 16:13:41 2020 -0300
+
+    'implementacao de mensagens (em uma funcao unica), inserir (nao esta pegando), emOrdem, lerDoUsuario e printarRaiz'
+
+ func.c | 73 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 68 insertions(+), 5 deletions(-)
+
+commit 99cd820d42ae8a372f45005b39cda120531dd620
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 10 16:11:21 2020 -0300
+
+    'PrintarRaiz agora tem retorno e lerUsuario tem menos acesso a arvore'
+
+ arvore.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit a77fc575389870b551e7049579af04948b14677f
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Mon Nov 9 21:37:33 2020 -0300
+
+    'Exclusão da funcao <printarMain> e implementacao direto no main'
+
+ func.c | 19 +------------------
+ 1 file changed, 1 insertion(+), 18 deletions(-)
+
+commit 6c923a3e01846aa0a6e18d7ef0c35045aa4929ca
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Mon Nov 9 21:35:59 2020 -0300
+
+    'Ampliação e quebra do menu (agora no main) em dois, adicao de loop'
+
+ main.c | 92 +++++++++++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 75 insertions(+), 17 deletions(-)
+
+commit d8a591c1313c3186bae12d5c8e97d5e654390f3b
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 17:07:46 2020 -0300
+
+    'Exclusão do arquivo executavel'
+
+ main | Bin 20848 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fb507cac947ab03fe4970e9319e775b0f63e9d0f
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 17:02:47 2020 -0300
+
+    'Adição do main(executavel)'
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit d659e8d67aaaf8e4a6559970a14e9ca38bdc4550
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 17:01:54 2020 -0300
+
+    'Adicao de comentarios, tranferencia de stdio para func e chamada com menu com switch'
+
+ arvore.h |  2 +-
+ main.c   | 26 +++++++++++++++++++++-----
+ 2 files changed, 22 insertions(+), 6 deletions(-)
+
+commit 78ac57907d503689fbee1d4ca2d47a827e043b4e
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 16:58:55 2020 -0300
+
+    'Inclusao do stdio.h, implementação menu interativo e reduzação de linhas não utlizadas'
+
+ func.c | 88 ++++++++++++++++++++++++------------------------------------------
+ 1 file changed, 32 insertions(+), 56 deletions(-)
+
+commit 4955578e3bb672d8b29ef41fe2a52459d109c6bf
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 14:33:43 2020 -0300
+
+    'Adição de funcoes e parametros'
+
+ func.c | 42 +++++++++++++++++++++++-------------------
+ 1 file changed, 23 insertions(+), 19 deletions(-)
+
+commit 77998c70ce407528ba2386523b62ef1ae5cc108c
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 14:32:45 2020 -0300
+
+    'Adição da funções do projeto'
+
+ arvore.h | 22 +++++++++++++++++-----
+ 1 file changed, 17 insertions(+), 5 deletions(-)
+
+commit 99325e5c065afa34c567307139cf0abe8455fc7a
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 13:12:13 2020 -0300
+
+    'Mudança de constantes para func.c'
+
+ main.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+commit 8276ba002c6f9f9193ca6a5dea39db246988d9fb
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 13:11:13 2020 -0300
+
+    'Adição de funções necessarias'
+
+ func.c | 50 ++++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 42 insertions(+), 8 deletions(-)
+
+commit b476a2846640435bced2644412864b8d7640eb65
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sat Nov 7 13:10:23 2020 -0300
+
+    'Primeira função do cabeçalho'
+
+ arvore.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6904c3ab36d4c4dface4709438bd682afe1d2867
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 6 21:23:44 2020 -0300
+
+    'Inclusão de novas informações sobre desenvolvedores'
+
+ main.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit ba37a30a8a937fc4aa9de1c952f79f7c0c5d44ee
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 6 21:22:46 2020 -0300
+
+    'Adição de métodos que poderam ser implementados'
+
+ func.c | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 47 insertions(+)
+
+commit 49ff48dd4cf5ccb3b173ffb32fc7553cd2ca2b86
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 6 21:22:06 2020 -0300
+
+    'Mudanca de nomes das variaveis da struct'
+
+ arvore.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 043b0b2ade07a9fea41601017261279ea10ec36a
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 3 19:30:49 2020 -0300
+
+    'Adição de estrutura basica'
+
+ func.c | 2 ++
+ main.c | 1 +
+ 2 files changed, 3 insertions(+)
+
+commit 46213f9df0ae212cdd96b9943e9fb59fd9d541da
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 3 19:20:56 2020 -0300
+
+    'Adição de estrutura basica'
+
+ arvore.h |  19 +++++++++++++++++++
+ header.h |   0
+ main     | Bin 0 -> 20848 bytes
+ main.c   |  22 ++++++++++++++++++++++
+ 4 files changed, 41 insertions(+)
+
+commit 6d693337fc4d8abb617b679f78931ea9b4b6f29f
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Tue Nov 3 18:51:31 2020 -0300
+
+    Inclusão de arquivos principais
+
+ func.c   | 0
+ header.h | 0
+ main.c   | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 10cf2a0f09fa6c9b61865b65be4518564c59508b
+Author: Matheus Santos <52107701+Mat5heus@users.noreply.github.com>
+Date:   Tue Nov 3 13:41:55 2020 -0300
+
+    Initial commit
+
+ LICENSE   | 674 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md |   1 +
+ 2 files changed, 675 insertions(+)

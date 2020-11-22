@@ -1,5 +1,8 @@
-# Trabalho_Pratico_A2
+# Arvore binária em C
+
+É um programa para criação e monitoramento de arvore binárias, 
+construido em linguagem C
 
 
-A parte mais atualizada do código está no branch desenvolvimento
-Aoba, deu certo?
+Código disponível em:
+https://github.com/Mat5heus/Arvore_binaria_em_C
