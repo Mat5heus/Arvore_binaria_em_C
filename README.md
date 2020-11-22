@@ -4,5 +4,5 @@
 construido em linguagem C
 
 
-Mais informacoes:
+Código disponível em:
 https://github.com/Mat5heus/Arvore_binaria_em_C

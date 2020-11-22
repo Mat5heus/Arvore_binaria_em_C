@@ -7,7 +7,7 @@
 #define false 0
 
 void mensagensAviso(int cod, int valor) {
-    printf("\nAVISO #%d: ", cod);
+    printf("\nAVISO #%d: ", cod); // Exibe aviso, cod e depois a mensagem
     switch (cod) {
     case 1:
         printf("O valor %d ja foi adicionado!", valor);
@@ -29,7 +29,7 @@ void mensagensAviso(int cod, int valor) {
     printf("\n");
 }
 void mensagensErro(int cod, char *nome) {
-    printf("\nERRO #%d: ", cod);
+    printf("\nERRO #%d: ", cod); // Exibe o erro e o cod e depois a mensagem 
     switch (cod) {
     case 1:
         printf("O arquivo \"%s\" nao foi aberto corretamente", nome);
@@ -55,7 +55,7 @@ void inserirNo(Arvore **tree, int valor) {
     if(estaVazia(*tree)) {
         Arvore *novo;
 
-        novo = (Arvore*) malloc(sizeof(Arvore));
+        novo = (Arvore*) malloc(sizeof(Arvore)); // Aloca um espaco na memoria para o novo No
         
         novo->pai = NULL;
         novo->dir = NULL;
@@ -64,6 +64,8 @@ void inserirNo(Arvore **tree, int valor) {
 
         *tree = novo;
     } else { 
+        // Garante que nao haveram valores repetidos
+        // E que uma ordenacao de menor pra o  maior
         if(aux->dado == valor) {
             mensagensAviso(1, valor);
             return;
@@ -72,6 +74,7 @@ void inserirNo(Arvore **tree, int valor) {
         else
             inserirNo(&aux->dir,valor);
         
+        // Adiciona um pai aos Nos
         if (aux->esq != NULL)
             if(aux->esq->pai == NULL)
                 aux->esq->pai = aux;
@@ -84,22 +87,22 @@ void inserirNo(Arvore **tree, int valor) {
 
 void lerArquivo(Arvore **tree) {
     int valor, ctd;
-    char *nome = "dados.txt";
+    char *nome = "dados.txt"; // Salva o nome do arquivo
     FILE *arq;
 
-    arq = fopen(nome, "r");
+    arq = fopen(nome, "r"); // Abre o arquivo para leitura
 
     if(arq == NULL) {
-        mensagensErro(1, nome);
+        mensagensErro(1, nome); // Printa mensagem de erro 
         exit(1);
     }
 
-    for(ctd = 0; !feof(arq); ctd++) {
-        fscanf(arq, "%d", &valor);
-        inserirNo(tree, valor);
+    for(ctd = 0; !feof(arq); ctd++) { // Le todo o arquivo
+        fscanf(arq, "%d", &valor); // Le valor por valor
+        inserirNo(tree, valor); // Insere no No
     }
 
-    fclose(arq);
+    fclose(arq); // Encerra a leitura e fecha o arquivo
 }
 
 //verifica se o no esta vazio
@@ -120,7 +123,7 @@ int ehNoFolha(Arvore *tree) {
 
 // Verifica se o no é raiz
 int ehNoRaiz(Arvore *tree) {
-    if(tree->pai == NULL)
+    if(tree->pai == NULL) 
         return true;
     else
         return false;
@@ -163,12 +166,12 @@ void printarNosRamo(Arvore *tree) {
 int alturaEProfundidade(Arvore *tree) {
     int esq, dir;
     if (estaVazia(tree))
-        return -1;
+        return -1; // Garante que o primeiro No valido será zero
 
-    esq = alturaEProfundidade(tree->esq);
-    dir = alturaEProfundidade(tree->dir);
+    esq = alturaEProfundidade(tree->esq); // Conta a profundidade a esquerda
+    dir = alturaEProfundidade(tree->dir); // Conta a profundidade a direita
 
-    if (esq > dir)
+    if (esq > dir) // Retorna so a maior profundidade encontrada
         return esq+1;
     else
         return dir+1;
@@ -176,38 +179,38 @@ int alturaEProfundidade(Arvore *tree) {
 
 int grauDoNo(Arvore *tree) {
     int filhos = 0;
-    if (tree->dir != NULL)
+    if (tree->dir != NULL) // Se houver filho a direita soma +1
         filhos++;
-    if(tree->esq != NULL)
+    if(tree->esq != NULL) // Se houver filho a esquerda soma +1
         filhos++;
     
-    return filhos;
+    return filhos; // Retorna o grau do No
 }
 
 int profundidadeDoNo(Arvore *tree) {
     int profundidade = 0;
-    while(!ehNoRaiz(tree)) {
-        tree = tree->pai;
-        profundidade++;
+    while(!ehNoRaiz(tree)) { // Para ao encontrar a raiz
+        tree = tree->pai; // Sobe ate o no raiz
+        profundidade++; // Conta os pulos
     }
     return profundidade;
 }
 
 void printarDescendentes(Arvore *tree, int valor) {
-    emOrdem(tree->esq);
-    emOrdem(tree->dir);
+    emOrdem(tree->esq); // Exibe primeiro os Nos de menor valor
+    emOrdem(tree->dir); // Depois os de maior
 }
 
 void printarAncestrais(Arvore *tree, int valor) {
-    while(!ehNoRaiz(tree)) {
-        tree = tree->pai;
-        printf("%d ", tree->dado);
+    while(!ehNoRaiz(tree)) { // Para ao encontrar a raiz
+        tree = tree->pai; // Sobe ate o no raiz
+        printf("%d ", tree->dado); // Exibe todos os nos encontrados
     }
 }
 
 void preOrdem(Arvore *tree) { //Gui
     if(tree != NULL){
-        printf("%d ", tree->dado);
+        printf("%d ", tree->dado); // Processa e pula
         preOrdem(tree->esq);
         preOrdem(tree->dir);
     }
@@ -217,14 +220,14 @@ void posOrdem(Arvore *tree) { //Gui
 	if(tree != NULL){
         posOrdem(tree->esq);
         posOrdem(tree->dir);
-        printf("%d ", tree->dado);
+        printf("%d ", tree->dado); // Pula e processa
     }
 } 
 
 void emOrdem(Arvore *tree) {
     if (!estaVazia(tree)) {
         emOrdem(tree->esq);
-        printf("%d ", tree->dado);
+        printf("%d ", tree->dado); // Pula, processa e continua
         emOrdem(tree->dir);
     }
 } 
