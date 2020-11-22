@@ -123,46 +123,46 @@ int main() {
             printarNosRamo(tree);
             break;
         case 5:
-            printf("\nAltura da arvore: %d", alturaEProfundidade(tree)); // Por favor, comentar funcao
+            printf("\nAltura da arvore: %d", alturaEProfundidade(tree)); // Exibe a altura da arvore
             break;
         case 6:
-            printf("\nProfundidade da arvore: %d", alturaEProfundidade(tree)); // Por favor, comentar funcao
+            printf("\nProfundidade da arvore: %d", alturaEProfundidade(tree)); // Exibe a profundidade da arvore
             break;
         case 7:
-            printf("\nDigite o No que deseja saber a grau: "); // Por favor, comentar funcao
+            printf("\nDigite o No que deseja saber a grau: "); // Pergunta ao usuario que desejad
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
             else
-                printf("\nGrau do No %d: %d", valor, grauDoNo(aux));
+                printf("\nGrau do No %d: %d", valor, grauDoNo(aux)); // Exibe valor do No e o grau dele
             break;
          case 8:
-            printf("\nDigite o no que deseja saber a altura: "); // Por favor, comentar funcao
+            printf("\nDigite o no que deseja saber a altura: "); // Pergunta qual No deseja saber a altura
             scanf("%d", &valor);
-            aux = buscar(tree, valor);
+            aux = buscar(tree, valor); // Busca o No
             if (estaVazia(aux))
-                mensagensAviso(2, valor);
+                mensagensAviso(2, valor); // Avisa caso ele nao exista
             else
-                printf("\nAltura do No %d: %d", valor, alturaEProfundidade(aux));
+                printf("\nAltura do No %d: %d", valor, alturaEProfundidade(aux)); // Exibe o valor e a altura do No
             break;
          case 9:
-            printf("\nDigite o no que deseja saber a profundidade: "); // Por favor, comentar funcao
+            printf("\nDigite o no que deseja saber a profundidade: "); /// Pergunta qual No deseja saber a profundidade
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
-                mensagensAviso(2, valor);
+                mensagensAviso(2, valor); // Avisa caso ele nao exista
             else
-                printf("\nProfundidade do No %d: %d", valor, profundidadeDoNo(aux));
+                printf("\nProfundidade do No %d: %d", valor, profundidadeDoNo(aux)); // Exibe o valor e a profundidade do No
             break;
         case 10:
             printf("\nDigite o No do qual deseja ver o descendentes: ");
             scanf("%d", &valor);
             aux = buscar(tree, valor);
             if (estaVazia(aux))
-                mensagensAviso(2, valor);
+                mensagensAviso(2, valor); // Avisa caso ele nao exista
             else if(!grauDoNo(aux))
-                mensagensAviso(3, valor);
+                mensagensAviso(3, valor); // Avisa caso o No nao tenha filhos
             else {
                 printf("\nDescendentes de %d: ", valor);
                 printarDescendentes(aux, valor);
@@ -171,11 +171,11 @@ int main() {
         case 11:
             printf("\nDigite o No do qual deseja ver o ancestrais: ");
             scanf("%d", &valor);
-            aux = buscar(tree, valor);
+            aux = buscar(tree, valor); // Busca o No
             if (estaVazia(aux))
                 mensagensAviso(2, valor);
-            else if(ehNoRaiz(aux))
-                mensagensAviso(4, valor);
+            else if(ehNoRaiz(aux)) // verifica se o No é raiz
+                mensagensAviso(4, valor); // Se for avisa 
             else {
                 printf("\nAncestrais de %d: ", valor);
                 printarAncestrais(aux, valor);
