@@ -1,3 +1,11 @@
+f916b57 - Mat5heus (Sun Nov 22 13:43:59 2020 -0300) Alteracao e adicao de comentarios
+b514900 - Mat5heus (Sun Nov 22 13:33:32 2020 -0300) Troca de nome
+a68b85a - Mat5heus (Sun Nov 22 13:33:20 2020 -0300) Adicao de comentarios
+43d6716 - Mat5heus (Sun Nov 22 12:18:50 2020 -0300) Merge branch 'desenvolvimento' of https://github.com/Mat5heus/Arvore_binaria_em_C into desenvolvimento
+0e5a1c6 - M3yer (Sat Nov 21 14:35:46 2020 -0300) Add files via upload
+a191d81 - M3yer (Sat Nov 21 14:34:42 2020 -0300) Delete GUIA DE FUNCIONAMENTO DO CÓDIGO.pdf
+70b6510 - M3yer (Sat Nov 21 14:20:12 2020 -0300) Add files via upload
+767f7b2 - Mat5heus (Fri Nov 20 17:32:08 2020 -0300) Adição de informações básicas
 ded7eb8 - Mat5heus (Fri Nov 20 17:25:33 2020 -0300) Exclução de funções repetidas e Adicao de avisos
 7f7f09e - Mat5heus (Fri Nov 20 17:24:23 2020 -0300) Aprimoramentos de interface e adição de comentarios
 d6b1e8f - Mat5heus (Fri Nov 20 15:36:34 2020 -0300) Adição de logs e alteração no nome do repositorio

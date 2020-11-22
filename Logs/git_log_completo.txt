@@ -1,3 +1,76 @@
+commit f916b57800a9d3d205ba76ace6bc1336ae5e7ce8
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 13:43:59 2020 -0300
+
+    Alteracao e adicao de comentarios
+
+ main.c | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+commit b5149000063302158da450169613b022a6627213
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 13:33:32 2020 -0300
+
+    Troca de nome
+
+ ...IONAMENTO DO C\303\223DIGO.pdf" => Manual_do_usuario.pdf | Bin
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a68b85a8d575c2e3620d6b16be8852d137a3d4d6
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 13:33:20 2020 -0300
+
+    Adicao de comentarios
+
+ README.md |  2 +-
+ func.c    | 61 ++++++++++++++++++++++++++++++++-----------------------------
+ 2 files changed, 33 insertions(+), 30 deletions(-)
+
+commit 43d6716339ccb1dd6d5b5c769fbbca081e753e93
+Merge: 767f7b2 0e5a1c6
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Sun Nov 22 12:18:50 2020 -0300
+
+    Merge branch 'desenvolvimento' of https://github.com/Mat5heus/Arvore_binaria_em_C into desenvolvimento
+
+commit 0e5a1c6c4f84d886b2a522f79dd0aa659ae626f1
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Sat Nov 21 14:35:46 2020 -0300
+
+    Add files via upload
+
+ "GUIA DE FUNCIONAMENTO DO C\303\223DIGO.pdf" | Bin 0 -> 72399 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a191d8156ad5c0b0c15fc06ee053113e218c0955
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Sat Nov 21 14:34:42 2020 -0300
+
+    Delete GUIA DE FUNCIONAMENTO DO CÓDIGO.pdf
+
+ "GUIA DE FUNCIONAMENTO DO C\303\223DIGO.pdf" | Bin 72279 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 70b65101cbac1eb5daaaa09a0a292993384659bb
+Author: M3yer <49526782+M3yer@users.noreply.github.com>
+Date:   Sat Nov 21 14:20:12 2020 -0300
+
+    Add files via upload
+
+ "GUIA DE FUNCIONAMENTO DO C\303\223DIGO.pdf" | Bin 0 -> 72279 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 767f7b24a1ffda89e42057fd98fa63fec711766e
+Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
+Date:   Fri Nov 20 17:32:08 2020 -0300
+
+    Adição de informações básicas
+
+ Logs/git_log.txt          |  3 +++
+ Logs/git_log_completo.txt | 32 ++++++++++++++++++++++++++++++++
+ README.md                 |  6 ++++--
+ 3 files changed, 39 insertions(+), 2 deletions(-)
+
 commit ded7eb868e07cb57bac0f17dda668933e70bab00
 Author: Mat5heus <matheus.santos28@alunos.fho.edu.br>
 Date:   Fri Nov 20 17:25:33 2020 -0300
