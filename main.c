@@ -75,6 +75,8 @@ int main() {
 
     printf("\nDados armazenados com sucesso!!\n");
 
+    printf("\nDados armazenados com sucesso!!\n");
+
     do { // Exibe o menu até que o usuario o encerre
 
         printf( // Printa o segundo menu
